@@ -5,13 +5,13 @@
 
 
 
-function idades(resultado)_{
+function idades(resultado){
 	var menor;
 	var conta;	
 	var maior;
 	var conta;
-	var idade1 = document.getElementById('idade1');
-	var idade2 = document.getElementById('idade2');
+	var idade1 = document.getElementById('idade1').value;
+	var idade2 = document.getElementById('idade2').value;
 	if (idade1 > idade2 ) {
 		maior = idade1;
 	} else {
@@ -35,13 +35,13 @@ function idades(resultado)_{
 	</script>
 </head>
 <body>
-	<form name="form1" method="post">
+	<form name="form1" method="get">
 		<label>Idade 01</label>
-		<input type="text" name="idade1" id="idade1" /> 
+		<input type="text" name="idade1" id="idade1" value="" /> 
 		<label>Idade 02</label>
-		<input type="text" name="idade2" id="idade2" /> 
-		<input type="text" name="resultado" id="resultados" value="">
-		<button onCLick="idades(resultado)">Vai</button>
+		<input type="text" name="idade2" id="idade2" value="" /> 
+		<input type="text" name="resultados" id="resultados" value="">
+		<button onCLick="idades('resultado')">Vai</button>
 	</form>
 </body>
 </html>
