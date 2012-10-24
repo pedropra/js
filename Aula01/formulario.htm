@@ -2,46 +2,43 @@
 <head>
 	<meta charset="UTF-8"> 
 	<script type="text/javascript">
+		function idades(resultado){
+			var menor;
+			var conta;	
+			var maior;
+			var conta;
+			var idade1 = document.getElementById('idade1').value;
+			var idade2 = document.getElementById('idade2').value;
+			if (idade1 > idade2 ) {
+				maior = idade1;
+			} else {
+				maior = idade2;
+			}
+			conta = (maior/2)+7;
 
-
-
-function idades(resultado){
-	var menor;
-	var conta;	
-	var maior;
-	var conta;
-	var idade1 = document.getElementById('idade1').value;
-	var idade2 = document.getElementById('idade2').value;
-	if (idade1 > idade2 ) {
-		maior = idade1;
-	} else {
-		maior = idade2;
-	}
-	conta = (maior/2)+7;
-
-	if (idade1 < idade2) {
-		menor = idade1;
-	} else {
-		menor = idade2;
-	}
-	var resultado;
-	if ( menor < conta ) {
-		document.form1.resultados.value="Nao pode amigo"; 
-	} else {
-		document.form1.resultados.value="Pode sim amigo";
-	}
-}
-
+			if (idade1 < idade2) {
+				menor = idade1;
+			} else {
+				menor = idade2;
+			}
+			var resultado;
+			if ( menor < conta ) {
+				document.form1.resultados.value="Nao pode amigo"; 
+			} else {
+				document.form1.resultados.value="Pode sim amigo";
+			}
+		}
 	</script>
 </head>
 <body>
+	<h1>Termometro de idade</h1>
 	<form name="form1" method="get">
 		<label>Idade 01</label>
 		<input type="text" name="idade1" id="idade1" value="" /> 
 		<label>Idade 02</label>
 		<input type="text" name="idade2" id="idade2" value="" /> 
+		<input type="button" onCLick="idades('resultado')" value="Vai">
 		<input type="text" name="resultados" id="resultados" value="">
-		<button onCLick="idades('resultado')">Vai</button>
 	</form>
 </body>
 </html>
