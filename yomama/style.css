@@ -1,0 +1,21 @@
+/*Yomama Jogo da Velha*/
+
+/*Quadro*/
+
+.content  {
+	position: relative;
+	width: 450px;
+	height: 450px;
+	margin: 0 auto;
+}
+
+.celula {
+	width: 150px;
+	height: 150px;
+	float: left;
+	background: aqua;
+}
+
+.celula:hover {
+	background: red;
+}
